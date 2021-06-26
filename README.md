@@ -6,7 +6,7 @@ This app was developed using the movie database API [tmdb] found at https://deve
 
 Submitted by: **Jose Angel Del Angel**
 
-Time spent: **20** hours spent in total
+Time spent: **24** hours spent in total
 
 ## User Stories
 
@@ -45,23 +45,22 @@ GIF created with [LiceCap](https://www.cockos.com/licecap/).
 
 ## Challenges when developing the app
 
-**Getting youtube video key and passing it through diferent classes:**
+**Getting youtube video url and passing it through diferent classes:**
 
 Youtube video feature was a whole challenge that involved getting the id of a certain movie, using such id to get the video url and generating the Youtube player view. 
 
-In this challenge the time at wich the youtube url was retrived was crucial since we should already have the url before generating the youtube player view and thus url culdn't be retrivered in the MovieTrailer activity. To solve this we retrived the URL in the MovieDescription activity and wrapped it to pass it to MovieTrailer activity.
+In this challenge the time at wich the youtube url was retrived was crucial, since we should already have the youtubr url before generating the youtube player view and thus, url culdn't be retrivered in the MovieTrailer activity. To solve this we retrived the URL in the MovieDescription activity wrapping it and passing it to the MovieTrailer activity.
 
 **Modern android versions avoiding icons in toolbar**
 
-Modern versions of android made difficult to have an icon displayed inside the toolbar and since many android forums are out of date with that feature a large research was done. 
+Modern versions of android made difficult to have an icon displayed inside of the toolbar, and since many android forums are out of date with that feature a large research was done. 
 
 **Retriving reviews and wrapping two arguments**
 
-In order to get the movie reviews we implemented a process similar to the one found in Youtube Player View, nontheless creating our own recycled view, the required adapter and all the methods required for such recycled view was a challenge. To make this task easier the View Holders in the recycled view are text views instead of complex views.
+In order to get the movie reviews we implemented a process similar to the one found in Youtube Player View; nontheless creating our own recycled view, the required adapter and all the methods required for such recycled view was a challenge and a huge opportunity to lear about Recycled Views. To make the youtube videos task easier the View Holders in the recycled view contain text views instead of complex views.
 
-Since we should use the same movie id to get reviews that would be displayed in the same window as the videos we should pass to the MovieTrailer the youtube video URL and the movie id (two different items) and to achieve this a string array containing both elements was wrapped.
+Since we should used the movie id to get reviews that would be displayed in the same window as the yt video, we wrappped and passed to the MovieTrailer the youtube video URL and the movie id (two different items) using a string array containing both elements (movie id and youtube URL).
 
-Describe any challenges encountered while building the app.
 
 ## License
 
