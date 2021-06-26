@@ -37,7 +37,7 @@ Here's a walkthrough of implemented user stories:
 <img src= 'walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
-Here's a walkthrough of portrait functionality:
+Here's a walkthrough of landscape functionality:
 
 <img src= 'walkthrough2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
