@@ -1,18 +1,20 @@
 # Project 2 - *Flixster*
 
-**Flixster** is an android app that allows building a todo list and basic todo items management functionality including adding new items, editing and deleting an existing item.
+**Flixster** is an app that informs the user about the latest movies, allowing the user to see a movie overview, the overall rating of the movie, movie's trailer in youtube and users reviews for each movie!.
+
+This app was developed using the movie database API found at https://developers.themoviedb.org/3
 
 Submitted by: **Jose Angel Del Angel**
 
-Time spent: **6** hours spent in total
+Time spent: **20** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-* [ ] User can **view a list of todo items**
-* [ ] User can **successfully add and remove items** from the todo list
-* [ ] User's **list of items are persisted** across app restarts
+* [x] User can **view a list of the latest movies**
+* [x] User can **movie image has a default placeholder** 
+* [x] Users are able to use **the app in landscape and portrait mode** 
 
 The following **bonus** features are implemented:
 
@@ -41,7 +43,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2021 Jose Angel Del Angel Dominguez
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
