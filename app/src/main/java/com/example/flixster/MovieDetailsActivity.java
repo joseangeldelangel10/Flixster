@@ -49,12 +49,15 @@ public class MovieDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details2);
         // unwrap the movie passed in via intent, using its simple name as a key
+        /* ------------------------------------------------------------------------------------------------------------------------------------
+                                                        ACTION BAR
+        ------------------------------------------------------------------------------------------------------------------------------------*/
         ActionBar actionBar;
         actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setLogo(R.drawable.popcorn_icon);
         actionBar.setDisplayUseLogoEnabled(true);
-
+        /* ------------------------------------------------------------------------------------------------------------------------------------*/
 
         mvTitle = findViewById(R.id.mvTitle);
         mvDescription = findViewById(R.id.mvDetailsDescription);
@@ -79,8 +82,8 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
 
         AsyncHttpClient client = new AsyncHttpClient();
-        String mv = movie.getVideoUrl();
-        String rv = movie.getReviewsUrl();
+        String mv = movie.getVideoUrl() + getString(R.string.apiKey);
+        String rv = movie.getReviewsUrl() + getString(R.string.apiKey);
         client.get( mv , new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int i, Headers headers, JSON json) {

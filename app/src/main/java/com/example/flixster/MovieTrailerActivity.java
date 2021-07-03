@@ -53,7 +53,7 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
         YouTubePlayerView playerView = (YouTubePlayerView) findViewById(R.id.player);
 
         // initialize with API key stored in secrets.xml
-        playerView.initialize( "AIzaSyCps4SAXssA8iJY4Fp5q7dZcuLEJ66W4M4" , new YouTubePlayer.OnInitializedListener() {
+        playerView.initialize( getString(R.string.apiKey) , new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider,
                                                 YouTubePlayer youTubePlayer, boolean b) {

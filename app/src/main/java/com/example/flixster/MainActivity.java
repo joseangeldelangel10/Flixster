@@ -26,11 +26,11 @@ import java.util.List;
 import okhttp3.Headers;
 
 public class MainActivity extends AppCompatActivity {
-
     /* we declare the movies array where we will store the movies retrivered from tmdb API as well as the URL that will retrieve the movies*/
-    public static final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=4347b0c21bd265de3d25605c92b4d7f8";
+    public static final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=";
     public static final String TAG = "MainActivity";
     List<Movie> movies;
+    String apiKey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        apiKey = getString(R.string.apiKey);
+        Log.e("APIKEY", getString(R.string.apiKey));
 
         /* we add the movie icon to the toolbar*/
         ActionBar actionBar;
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         /* we use an http client and a json response handler to retrieve all the recent movies and we convert the
         json movie object into movie class instances*/
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get(NOW_PLAYING_URL, new JsonHttpResponseHandler() {
+        client.get(NOW_PLAYING_URL + apiKey, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int i, Headers headers, JSON json) {
                 Log.d(TAG, "onSuccess");
@@ -84,4 +86,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }

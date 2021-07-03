@@ -1,5 +1,8 @@
 package com.example.flixster.models;
 
+import com.example.flixster.MainActivity;
+import com.example.flixster.R;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -57,10 +60,10 @@ public class Movie {
     }
 
     public String getVideoUrl(){
-        return "https://api.themoviedb.org/3/movie/" + id.toString() + "/videos?api_key=4347b0c21bd265de3d25605c92b4d7f8";
+        return "https://api.themoviedb.org/3/movie/" + id.toString() + "/videos?api_key=";
     }
 
     public String getReviewsUrl(){
-        return "https://api.themoviedb.org/3/movie/" + id.toString() + "/reviews?api_key=4347b0c21bd265de3d25605c92b4d7f8";
+        return "https://api.themoviedb.org/3/movie/" + id.toString() + "/reviews?api_key=";
     }
 }
